@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>eqjnzcyre@tznvy.pbz</string>
+	<key>contactName</key>
+	<string>Ronald Wampler</string>
+	<key>description</key>
+	<string>Support for the &lt;a href="https://swift.org/package-manager/"&gt;Swift Package Manager Tools&lt;/a&gt;.</string>
+	<key>name</key>
+	<string>Swift Package Manager</string>
+	<key>uuid</key>
+	<string>DF40C743-6061-4F9E-B27E-9DB640E8DC49</string>
+</dict>
+</plist>

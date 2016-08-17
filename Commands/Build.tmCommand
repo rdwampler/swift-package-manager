@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoScrollOutput</key>
+	<true/>
+	<key>beforeRunningCommand</key>
+	<string>saveModifiedFiles</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby18 -wKU
+require "#{ENV["TM_SUPPORT_PATH"]}/lib/tm/executor"
+require "#{ENV["TM_SUPPORT_PATH"]}/lib/escape"
+
+TextMate::Executor.make_project_master_current_document
+
+flags = [ ]
+flags &lt;&lt; "build"
+
+TextMate::Executor.run(e_sh(ENV["TM_SWIFT_BUILD"] || 'swift'), flags, :verb =&gt; "Making", :noun =&gt; ("default"), :use_hashbang =&gt; false, :version_args =&gt; '--version')</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@b</string>
+	<key>name</key>
+	<string>Build</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>outputReuse</key>
+	<string>reuseBusy</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>swift</string>
+			<key>locations</key>
+			<array>
+				<string>/usr/bin/swift</string>
+			</array>
+			<key>variable</key>
+			<string>TM_SWIFT</string>
+		</dict>
+	</array>
+	<key>scope</key>
+	<string>attr.project.swift - (text dyn.selection)</string>
+	<key>semanticClass</key>
+	<string>process.swift.build</string>
+	<key>uuid</key>
+	<string>8C575595-F8B5-4927-94B9-590A5449F421</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
